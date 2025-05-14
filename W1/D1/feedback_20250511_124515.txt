@@ -1,0 +1,12 @@
+URL: https://github.com/kaylaniBatin/DI-Bootcamp/blob/main/W1/D1/XP_exercises.py
+suggestions for improvement:
+- In Exercise 3, the code should actually execute the comparison operations and print the results instead of just predicting them.  The predictions for string vs. integer comparisons are also incorrect; Python will throw a TypeError in those cases.
+- Exercise 5 could be improved by using more descriptive variable names (e.g., `my_name`, `my_age`).
+- In Exercise 8, the comparison is case-sensitive.  Consider using `.lower()` to make it case-insensitive for a more robust comparison.
+- Add more comprehensive error handling (e.g., `try-except` blocks) to handle potential user input errors (like non-numeric input in Exercises 7 and 9).
+Brief justification:
+- correctness: Most exercises are correctly implemented, accurately reflecting the chapter's instructions. The main exception is Exercise 3, where the code doesn't run the comparisons and the predictions are partially wrong. Exercises 1, 2, 4, 5, 6, 7, 8, and 9 correctly implement the specified functionality.
+- readability: The code is generally readable, but some variable names could be more descriptive. The comments in Exercise 3 are unconventional.  It would be more helpful to run the code and display the output there or in a separate section for the exercise.
+- performance: The code's performance is acceptable for these small examples.  There are no obvious performance bottlenecks.
+- security: No security vulnerabilities are present in this code.  User input is handled appropriately, though more robust error handling would improve its robustness.
+
