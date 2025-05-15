@@ -8,21 +8,28 @@ $a
 #t%''' 
 import re
 
-# Step 1: Convert the string into a 2D list
-matrix_lines = MATRIX_STR.strip().split('\n')
-matrix = [list(line) for line in matrix_lines]
 
-# Step 2: Read the matrix column-wise (top to bottom, left to right)
-columns = len(matrix[0])
-rows = len(matrix)
+new_list = MATRIX_STR.strip().split('\n')
+big_list = [list(line) for line in new_list]
 
-raw_message = ""
-for col in range(columns):
-    for row in range(rows):
-        raw_message += matrix[row][col]
+message = ''
+for col in range(len(big_list[0])):
+    for row in big_list:
+        message += row[col]
 
+def replace_non_alpha_between_letters(text):
+    result = []
+    i = 0
 
-decoded_message = re.sub(raw_message)
+    while i < len(text):
+        if text[i].isalpha():
+            result.append(text[i])
+            i += 1
+        else:
+            while i < len(text) and not text[i].isalpha():
+                i += 1
+            if result and i < len(text) and text[i].isalpha():
+                result.append('')
 
-
-print(decoded_message)
+    return ''.join(result)
+print(message)
