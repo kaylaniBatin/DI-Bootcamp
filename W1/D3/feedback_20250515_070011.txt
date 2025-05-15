@@ -1,0 +1,12 @@
+URL: https://github.com/kaylaniBatin/DI-Bootcamp/blob/main/W1/D3/dailychallenge.py
+suggestions for improvement:
+- The code provided does not address the matrix decoding problem described in the Chapter Content/Questions. It solves two unrelated problems: creating a dictionary of character indices from a word and filtering affordable items from a dictionary.
+- The matrix decoding problem requires reading a string, converting it to a 2D list, iterating through columns, filtering alphabetic characters, and replacing non-alphabetic character sequences with spaces.  None of this is present in the submitted code.
+- The code for the affordable items challenge has redundant code (`price = int(price)`) and could be improved for clarity.
+- Add comments explaining the purpose of each section of code for better readability.
+Brief justification:
+- correctness: The code received a score of 0% for correctness because it completely fails to address the core challenge of decrypting the hidden message from the matrix string.  The chapter explicitly outlines steps for transforming a string into a 2D list, processing columns, filtering alphabetic characters, and constructing the decoded message.  These steps are not present in the submitted code.
+- readability: The code is reasonably readable, with clear variable names in both challenges. The affordable items challenge could benefit from removing the redundancy and adding more detailed comments to explain the logic.  The score is reduced slightly due to the lack of comments and the redundancy in the second challenge.
+- performance: The performance of both solutions is generally good. The algorithms used are efficient for their respective tasks. The time complexity of the affordable items challenge is O(n log n) due to the sorting step, which is acceptable for this problem size. The character index dictionary creation has O(n) time complexity which is also efficient. 
+- security: The code does not present any security vulnerabilities. It handles user input and string manipulation safely. There are no issues related to SQL injection, cross-site scripting, or other security concerns.
+
