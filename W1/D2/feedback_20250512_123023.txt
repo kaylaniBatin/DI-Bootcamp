@@ -1,0 +1,18 @@
+URL: https://github.com/kaylaniBatin/DI-Bootcamp/blob/main/W1/D2/ExerciseXP.py
+suggestions for improvement:
+- **Exercise 1:** The code correctly uses sets and set operations but doesn't follow the instructions perfectly.  It reassigns `my_favorite_numbers` instead of creating a new set called `our_fav_numbers`.
+- **Exercise 2:**  The code cleverly uses a list as an intermediary to work around the immutability of tuples. However, this is not the best solution; it should explain why it's not directly possible to modify a tuple.
+- **Exercise 3:** The code accurately performs list manipulations.
+- **Exercise 4:** The loop only generates a sequence of floats, not mixed floats and integers as requested. The range should start at 1 and go to 5, with each number added and then converted into a float if necessary
+- **Exercise 5:** The code correctly implements both for loops as described. 
+- **Exercise 6:** Correctly implements the while loop.
+- **Exercise 7:** The while loop in this exercise is incomplete and will always exit on the first iteration because of `break` statement. The logic for checking if the chosen fruit is in the favorite fruits list is fine, but the loop needs to be fixed to allow multiple fruit inputs.
+- **Exercise 8:**  The code functions correctly and provides a clear output. 
+- **Exercise 9:** The code asks for only one age, not for each family member as instructed. The bonus portion about the restricted movie is not implemented.
+- **Exercise 10:** The code accurately removes all 'Pastrami' items and then processes the sandwich orders, providing a correct output.
+Brief justification:
+- correctness: Several exercises demonstrate incomplete or slightly inaccurate implementations.  For instance, Exercise 1 doesn't create a new set named `our_fav_numbers`, Exercise 7's loop is broken, Exercise 9 only processes one age, and Exercise 4 does not create the specified sequence. Most other exercises demonstrate a good understanding of the concepts and are correctly implemented, leading to a 75% score.
+- readability: The code is generally well-formatted and easy to follow. Variable names are mostly descriptive, and the code is reasonably well-structured.  The code can be improved by adding comments to explain complex parts, such as the tuple manipulation in Exercise 2.
+- performance: The code's performance is generally good for the tasks presented.  The algorithms used are efficient for their size.  In terms of larger scale, some exercises could be optimized for better performance in high volume settings, but for these simple tasks, the performance is sufficient. However, the solution for exercise 2 can be improved, as it involves unnecessary type conversion and can be slow for very large tuples.
+- security: There are no security vulnerabilities in the provided code. The code does not interact with external resources or handle sensitive data. Therefore it gets a perfect 100 score.
+
