@@ -1,64 +1,47 @@
 # Daily challenge: Old MacDonald’s Farm
-# Step 1: Define the Zoo Class
-class Zoo:
-    def __init__(self, zoo_name):
-        self.zoo_name = zoo_name
-        self.animals = []
-        self.groups = {}
+class Farm:
+    def __init__(self, farm_name):
+        self.name = farm_name
+        self.animals = {}
 
-    def add_animal(self, new_animal):
-        if new_animal not in self.animals:
-            self.animals.append(new_animal)
-
-    def get_animals(self):
-        print("Current animals in the zoo:")
-        for animal in self.animals:
-            print(f"- {animal}")
-
-    def sell_animal(self, animal_sold):
-        if animal_sold in self.animals:
-            self.animals.remove(animal_sold)
-            print(f"{animal_sold} has been sold.")
+    def add_animal(self, animal_type, count=1):
+        if animal_type in self.animals:
+            self.animals[animal_type] += count
         else:
-            print(f"{animal_sold} is not in the zoo.")
+            self.animals[animal_type] = count
 
-    def sort_animals(self):
-        self.animals.sort()
-        self.groups = {}  # reset previous groups
-        for animal in self.animals:
-            first_letter = animal[0].upper()
-            if first_letter not in self.groups:
-                self.groups[first_letter] = [animal]
-            else:
-                self.groups[first_letter].append(animal)
+    def get_info(self):
+        output = f"{self.name}'s farm\n\n"
+        for animal, count in self.animals.items():
+            output += f"{animal:<10} : {count}\n"
+        output += "\n    E-I-E-I-0!"
+        return output
 
-    def get_groups(self):
-        if not self.groups:
-            self.sort_animals()
-        print("Animal groups:")
-        for letter, group in self.groups.items():
-            print(f"{letter}: {group}")
+    def get_animal_types(self):
+        return sorted(self.animals.keys())
 
-# Step 2: Create a Zoo instance
-ramat_gan_safari = Zoo("Ramat Gan Safari")
+    def get_short_info(self):
+        animal_list = self.get_animal_types()
+        plural_animals = []
 
-# Step 3: Use the Zoo methods
-ramat_gan_safari.add_animal("Giraffe")
-ramat_gan_safari.add_animal("Bear")
-ramat_gan_safari.add_animal("Baboon")
-ramat_gan_safari.add_animal("Cougar")
-ramat_gan_safari.add_animal("Cat")
-ramat_gan_safari.add_animal("Zebra")
-ramat_gan_safari.add_animal("Lion")
+        for animal in animal_list:
+            count = self.animals[animal]
+            name = animal + "s" if count > 1 else animal
+            plural_animals.append(name)
 
-ramat_gan_safari.get_animals()
+        if len(plural_animals) > 1:
+            animals_str = ", ".join(plural_animals[:-1]) + " and " + plural_animals[-1]
+        else:
+            animals_str = plural_animals[0]
+
+        return f"{self.name}'s farm has {animals_str}."
+
+macdonald = Farm("McDonald")
+macdonald.add_animal('cow', 5)
+macdonald.add_animal('sheep')
+macdonald.add_animal('sheep')
+macdonald.add_animal('goat', 12)
+
+print(macdonald.get_info())
 print()
-
-ramat_gan_safari.sell_animal("Bear")
-print()
-
-ramat_gan_safari.get_animals()
-print()
-
-ramat_gan_safari.sort_animals()
-ramat_gan_safari.get_groups()
+print(macdonald.get_short_info())
