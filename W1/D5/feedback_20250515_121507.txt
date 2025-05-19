@@ -1,0 +1,11 @@
+URL: https://github.com/kaylaniBatin/DI-Bootcamp/blob/main/W1/D5/miniproject.py
+suggestions for improvement:
+- The code could include more descriptive variable names (e.g., instead of  `row`, `col`, consider `player_row`, `player_col`).
+- Consider adding a function to handle the game's initial setup to make the code modular, separating game initialization from the main game loop.
+- The input validation could be enhanced to handle non-numeric input more robustly.  While the current `try-except` block catches `ValueError`, it doesn't explicitly prevent the program from crashing due to other potential input errors.
+Brief justification:
+- correctness: The code implements all the steps outlined in the Chapter Content/Questions. It correctly creates the board, displays it, gets player input, checks for a win or tie, and switches between players.  All winning conditions (rows, columns, diagonals) are accurately checked. The game loop functions as expected, terminating when a win or tie occurs. Therefore, it fully satisfies the requirements.
+- readability: The code is well-structured, using functions to break down the problem into logical units (create_board, display_board, player_input, check_win, check_tie, play).  Variable names are mostly clear, and the code is easy to follow. Minor improvements to variable names would enhance readability further.
+- performance: The code's performance is efficient for this scale of problem. The algorithms for checking for wins and ties are optimal for a 3x3 board, and the input handling does not have major inefficiencies.  The time and space complexity is suitable for this application.
+- security: The code is secure in that there are no obvious vulnerabilities. It handles user input reasonably well with the `try-except` block and input validation preventing common errors.  There are no apparent injection vulnerabilities or other security risks for this simple game.
+

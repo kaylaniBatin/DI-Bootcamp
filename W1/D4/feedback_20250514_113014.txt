@@ -1,0 +1,11 @@
+URL: https://github.com/kaylaniBatin/DI-Bootcamp/blob/main/W1/D4/exerciseXP.py
+suggestions for improvement:
+- In Exercise 5, the `make_shirt` function is defined twice.  This should be consolidated into a single definition.
+- Exercise 7 is missing the `main()` function implementation.  The code should include the logic to get user input (or a default season), call `get_random_temp()`, and provide temperature advice based on the result.
+- Add docstrings to functions to improve readability and explain their purpose and parameters.
+Brief justification:
+- correctness: Exercises 1-6 and parts of Exercise 7 correctly implement the specified functionality according to the chapter content. Exercise 5 has a minor error of defining the function twice. The missing `main` function in Exercise 7 prevents complete correctness.  Otherwise, the functions generally meet the requirements outlined in the chapter, including parameter handling, default values, and conditional logic. The random number generation in Exercise 4 and the use of f-strings and string concatenation in other exercises align with the chapter's goals.
+- readability: The code is mostly readable, with clear variable names and straightforward logic.  However, the duplicate function definition in Exercise 5 detracts from readability. Adding docstrings would significantly enhance readability and make the code easier to understand.
+- performance: The code's performance is good.  The algorithms are efficient, and there are no obvious performance bottlenecks. The use of built-in functions and optimized libraries (such as `random`) contributes to good performance.
+- security: There are no apparent security issues in the provided code.  The code doesn't handle external inputs in a way that could create vulnerabilities, and it doesn't access sensitive data.
+

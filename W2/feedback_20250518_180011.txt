@@ -1,0 +1,15 @@
+URL: https://github.com/kaylaniBatin/DI-Bootcamp/blob/main/W2/dailychallenge.py
+suggestions for improvement:
+- The code implements a `Zoo` class, not a `Farm` class as required.
+- The `Zoo` class doesn't use dictionaries to store animal counts as specified in the instructions. It uses a list and then groups by the first letter.
+- The `add_animal` method in the `Zoo` class doesn't handle adding multiple animals of the same type; it only checks for existence.
+- The `get_info` method (or equivalent) is missing; the `get_animals` and `get_groups` methods don't format the output as required.
+- String formatting for column alignment and the 'E-I-E-I-0!' phrase are absent.
+- The bonus steps (methods `get_animal_types` and `get_short_info`) are not implemented.
+- The code uses a list for animals and then sorts them using the first letter to group them. This is different from what was required (a dictionary to count animals).
+Brief justification:
+- correctness: The code completely fails to meet the requirements. It implements a different class (`Zoo`) with different functionality than the requested `Farm` class.  It does not use dictionaries to store animal counts,  nor does it produce the specified output format.  The bonus features are also missing.  The instructions explicitly state the need for a `Farm` class with specific methods (`__init__`, `add_animal`, `get_info`) and a particular output format. This implementation doesn't even attempt to fulfill these.
+- readability: The code is reasonably readable.  Variable and method names are descriptive, and the overall structure is clear.  Comments could be added for improved clarity.
+- performance: The performance is acceptable for the small-scale example used.  The `sort_animals` method has a time complexity of O(n log n) due to sorting, which is efficient for most purposes. However, the repeated calls to `sort_animals` are inefficient if there are many animals and changes are frequent.
+- security: There are no apparent security vulnerabilities in this code.
+
