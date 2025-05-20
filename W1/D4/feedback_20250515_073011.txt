@@ -1,0 +1,11 @@
+URL: https://github.com/kaylaniBatin/DI-Bootcamp/blob/main/W1/D4/dailychallenge.py
+suggestions for improvement:
+- The code correctly converts the matrix string into a 2D list and iterates through the columns. However, it doesn't accurately handle the replacement of non-alphabetic characters with spaces between alphabetic characters. The `replace_non_alpha_between_letters` function only adds spaces; it doesn't remove or replace non-alpha characters.
+- The code could benefit from more descriptive variable names (e.g., `matrix` instead of `big_list`).
+- Add error handling for the case where the input string is empty or malformed (e.g., rows with different lengths).
+Brief justification:
+- correctness: The code successfully transforms the input string into a 2D list and extracts characters column-wise (Step 1 & 2).  It correctly filters alpha characters (Step 3). However, Step 4, replacing symbols with spaces between alpha characters, is implemented incorrectly. The function adds spaces, but doesn't remove non-alpha characters.  Therefore, the final decoded message is partially correct, but not entirely as specified in the instructions. The chapter explicitly requires replacing symbol groups between alpha characters with spaces, which the code does not fully address.
+- readability: The code is relatively readable.  The use of list comprehensions is efficient and clear. However, more descriptive variable names would improve readability. The function `replace_non_alpha_between_letters` could be made more understandable with clearer comments.
+- performance: The algorithm's time complexity is reasonably efficient for the given problem size.  The nested loops are linear in relation to the number of rows and columns. There's no significant room for optimization unless dealing with extremely large matrices.
+- security: The code does not have any inherent security vulnerabilities as it only performs string manipulation. No external data or user input is involved.
+
