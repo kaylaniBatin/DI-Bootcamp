@@ -1,0 +1,11 @@
+URL: https://github.com/kaylaniBatin/DI-Bootcamp/blob/main/W1/D5/dailychallenge.py
+suggestions for improvement:
+- Challenge 1: The code for Challenge 1 perfectly addresses the prompt's requirements.  No improvements needed.
+- Challenge 2: The `longest_word` function in Challenge 2 doesn't correctly handle punctuation as part of the word.  It splits on whitespace, ignoring punctuation within words. For example, 'Margaret's' would be split into 'Margaret's', making it incorrectly find 'Margaret' instead of 'Margaret's' as the longest word.
+- Challenge 2: Add more comprehensive test cases to the longest_word function to cover various scenarios (including sentences with punctuation).
+Brief justification:
+- correctness: Challenge 1's code accurately takes comma-separated input, sorts it alphabetically, and prints the sorted list.  It directly fulfills the instructions. Challenge 2's code has a flaw; it doesn't correctly identify the longest word when punctuation is involved, deviating from the instructions' requirement to consider punctuation as part of the word.  The instructions clearly specify handling apostrophes, commas, and periods as part of words. The code, however, only splits on whitespace.
+- readability: Both functions are written clearly and concisely.  The code is easy to follow and understand. The variable names are descriptive.  Challenge 1's solution is particularly elegant in its simplicity.  Challenge 2 could benefit from a comment explaining the logic for handling longest word identification, but it's still readable.
+- performance: Both solutions have excellent performance for their respective tasks. The sorting algorithm in Challenge 1 and the iteration in Challenge 2 are both efficient for inputs of reasonable size.
+- security: There are no security concerns in the provided code.  It only takes user input and processes it locally.  There's no interaction with external systems or sensitive data.
+
