@@ -1,0 +1,13 @@
+URL: https://github.com/kaylaniBatin/DI-Bootcamp/blob/main/W2/D4/dailychallenge.py
+suggestions for improvement:
+- The `word_frequency` method could be improved by handling cases with multiple sentences more gracefully, and perhaps normalizing words to lowercase consistently.
+- The `most_common_word` method removes punctuation *after* counting words; this might lead to slightly inaccurate results. Consider performing punctuation removal during splitting or before frequency counting.
+- In `remove_stop_words`, consider loading the stop words from a file or a more comprehensive resource for better maintainability and expandability.
+- Add more comprehensive error handling (e.g., `try-except` blocks) around file operations in `from_file` to gracefully manage potential `FileNotFoundError` exceptions.
+- The `remove_special_characters` method could be optimized using a more efficient regular expression, and error handling could be added for edge cases.
+Brief justification:
+- correctness: The code largely fulfills the requirements outlined in the Chapter Content/Questions.  The `Text` class accurately implements methods for word frequency, most common word, and unique words. The `TextModification` class successfully removes punctuation, stop words, and special characters. However, there are minor inaccuracies and areas for improvement regarding word normalization, punctuation handling timing, and error handling, thus the score isn't perfect.
+- readability: The code is generally readable, with clear method names and well-organized classes. However, some improvements could be made to enhance readability, such as using more descriptive variable names and commenting on less obvious logic within methods. The use of the `string` module and regular expressions makes the code clear and easy to understand.
+- performance: The performance is adequate for smaller texts, but the current implementations have room for improvement. For instance,  the repeated splitting of the text string can be improved by processing it once and storing the result. The use of regular expression in `remove_special_characters` is efficient, but it could still be optimized for faster processing, especially with large texts.
+- security: The code doesn't have any obvious security vulnerabilities. The `from_file` method includes appropriate error handling against file-related issues, preventing unexpected crashes.  The use of encoding in `from_file` shows consideration for character handling and potential encoding-related problems.
+
