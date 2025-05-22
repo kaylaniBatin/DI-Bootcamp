@@ -1,0 +1,11 @@
+URL: https://github.com/kaylaniBatin/DI-Bootcamp/blob/main/W1/D2/daily_challenge.py
+suggestions for improvement:
+- Challenge 1:  The use of a `while` loop is fine, but a `for` loop would be more Pythonic and potentially slightly more readable for this specific task.  Consider using a list comprehension for a more concise solution.
+- Challenge 2: The while loop is again functional but a `for` loop with an `if` condition inside would be more readable.  Consider using a more descriptive variable name than `result`. A more efficient solution could be possible using string methods if performance was critical.
+- Both Challenges: Add input validation to handle non-integer inputs for Challenge 1 and non-alphabetical inputs (or other specified restrictions) for Challenge 2. This enhances robustness.
+Brief justification:
+- correctness: Both challenges' code correctly implements the specified functionality. Challenge 1 accurately generates a list of multiples up to the given length. Challenge 2 effectively removes consecutive duplicate letters from the input string, as detailed in the examples and instructions.  All example cases are handled correctly.
+- readability: The code is generally easy to understand. Variable names are mostly descriptive (except for `result` in Challenge 2), and the logic is straightforward.  However, the use of `while` loops where `for` loops would be more natural slightly detracts from readability.  The code could benefit from some minor formatting and commenting improvements.
+- performance: The performance of the code is acceptable for small input sizes.  However, the `while` loop approach might be slightly less efficient than using a `for` loop with a range or using list comprehensions (Challenge 1) or alternative string manipulation techniques (Challenge 2), especially for large inputs.  The current approach has O(n) time complexity, but minor optimizations are possible.
+- security: The code doesn't have any obvious security vulnerabilities. It doesn't interact with external systems or handle user input in a way that would create security risks.  The `input()` function is used appropriately, and no sensitive information is processed.
+
